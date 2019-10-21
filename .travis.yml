@@ -19,18 +19,18 @@ notifications:
 
 before_deploy:
       # Set up git user name and tag this commit
-      #- "echo 'Config user name and email'"
-      #- git config --local user.name "gavrilacatalin123"
-      #- git config --local user.email "gavrila.catalin.cg@gmail.com"
-      #- "echo 'Export variable TRAVIS_TAG'"
-      #- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}cata
-      #- "echo 'Setting GitHub TAG'"
-      #- git tag -a $TRAVIS_TAG -m "Travis build $TRAVIS_BUILD_NUMBER pushed a tag." 
-      #- "echo 'Push tag'"
-      #- git push origin --tags
-      #- "echo 'Fetch tag'"
-      #- git fetch origin
-      #- "echo 'Finished setting GitHub TAG'"
+      - "echo 'Config user name and email'"
+      - git config --local user.name "gavrilacatalin123"
+      - git config --local user.email "gavrila.catalin.cg@gmail.com"
+      - "echo 'Export variable TRAVIS_TAG'"
+      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}cata
+      - "echo 'Setting GitHub TAG'"
+      - git tag -a $TRAVIS_TAG -m "Travis build $TRAVIS_BUILD_NUMBER pushed a tag." 
+      - "echo 'Push tag'"
+      - git push origin --tags
+      - "echo 'Fetch tag'"
+      - git fetch origin
+      - "echo 'Finished setting GitHub TAG'"
       # -./set_tags.sh
 deploy:
   provider: releases
