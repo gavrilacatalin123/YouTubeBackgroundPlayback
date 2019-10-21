@@ -3,6 +3,3 @@ rules:
   - base: master
     upstream: pylerSM/YouTubeBackgroundPlayback:master    # change `wei` to the owner of upstream repo
     mergeMethod: merge
-  - base: yt-music
-    upstream: pylerSM/YouTubeBackgroundPlayback:yt-music    # change `wei` to the owner of upstream repo
-    mergeMethod: merge
